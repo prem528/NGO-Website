@@ -5,7 +5,7 @@ import recycle from "../../assets/ngo.jpg";
 import recycle1 from "../../assets/recycle.jpg";
 import recycle2 from "../../assets/recycle1.jpeg";
 import recycle3 from "../../assets/earth3.jpg";
-import nature from "../../assets/ngobg.mp4";
+import nature from "../../assets/ngobg11.mp4";
 
 const workItems = [
   {

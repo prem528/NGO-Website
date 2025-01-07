@@ -1,4 +1,5 @@
 import { Button } from "../../components/ui/button";
+// import video from "../../assets/background.mp4"
 export default function HeroSection() {
   return (
     <div className="relative py-8 overflow-hidden">
@@ -6,6 +7,7 @@ export default function HeroSection() {
       <video
         className="absolute inset-0 h-full w-full object-cover"
         src="https://firebasestorage.googleapis.com/v0/b/ngo-project-883c0.firebasestorage.app/o/ngo-site-data%2Fbackground.mp4?alt=media&token=50c9ae38-e37b-4f17-ba5d-9df9aff92f3d"
+        // src={video}
         autoPlay
         loop
         muted

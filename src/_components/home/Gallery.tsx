@@ -2,8 +2,8 @@ import { BentoGrid } from "../../components/ui/bento-grid";
 import image from "../../assets/earth3.jpg";
 import image1 from "../../assets/ngo.jpg";
 import image2 from "../../assets/ngo11.jpg";
-import image3 from "../../assets/ngo12.mp4";
-import image4 from "../../assets/ngo13.mp4";
+import image3 from "../../assets/ngo22.mp4";
+import image4 from "../../assets/ngo33.mp4";
 import image5 from "../../assets/recycle.jpg";
 import image6 from "../../assets/ngo14.jpg";
 

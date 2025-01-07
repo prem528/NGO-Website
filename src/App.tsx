@@ -11,6 +11,7 @@ import { Impact } from './_components/home/Impact'
 import { Volunteers } from './_components/home/volunteers'
 import { Gallery } from './_components/home/Gallery'
 import { Testimonials } from './_components/home/testimonials'
+import { Footer } from './_components/home/Footer'
  
 
 function App() {
@@ -33,6 +34,7 @@ function App() {
         <Gallery/>
         <Volunteers/>
         <Testimonials/>
+        <Footer/>
       </div>
     </BrowserRouter>
   )
