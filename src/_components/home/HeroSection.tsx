@@ -1,8 +1,7 @@
 import { Button } from "../../components/ui/button";
-
 export default function HeroSection() {
   return (
-    <div className="relative  min-h-[610px] w-full overflow-hidden">
+    <div className="relative py-8 overflow-hidden">
       {/* Video Background */}
       <video
         className="absolute inset-0 h-full w-full object-cover"
@@ -15,7 +14,7 @@ export default function HeroSection() {
       {/* Overlay */}
       <div className="absolute inset-0 bg-black/20" />
       <div className="container relative mx-auto flex items-center justify-center px-4 py-20">
-        <div className="max-w-2xl text-white text-center">
+        <div className="max-w-2xl text-white text-center  pb-32">
           <h2 className="mb-4 text-3xl font-light">Conversation Means</h2>
           <h1 className="mb-8 text-6xl font-bold leading-tight">
             Make an impact & give back to {" "} 

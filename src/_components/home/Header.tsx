@@ -5,9 +5,9 @@ import { Button } from '../../components/ui/button'
 
 export function Header() {
   return (
-    <nav className=" border-b bg-white">
-      <div className="container mx-auto flex items-center justify-between py-4 px-10 ">
-        <div className=' text-xl font-bold px-24'>
+    <nav className=" border-b bg-white px-24">
+      <div className="container mx-auto flex items-center justify-between py-4 px-4 ">
+        <div className=' text-xl font-bold'>
         <Link to="/" className="">
         <h1>
           LOGO
@@ -34,7 +34,7 @@ export function Header() {
               CONTACT US
             </Link>
           </div>
-          <Button className="bg-[#7ab80e] hover:bg-[#7ab80e]/90">BUY NOW</Button>
+          <Button className="bg-[#7ab80e] hover:bg-[#7ab80e]/90">CONNECT</Button>
         </div>
       </div>
     </nav>
