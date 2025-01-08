@@ -66,7 +66,7 @@ export function Footer() {
             <ul className="space-y-4">
               <li className="flex items-start gap-3 text-gray-400">
                 <MapPin className="w-5 h-5 text-[#7ab80e] mt-1" />
-                <span>Tyagal, Patan, Lalitpur</span>
+                <span>New Delhi, India</span>
               </li>
               <li className="flex items-center gap-3 text-gray-400">
                 <Phone className="w-5 h-5 text-[#7ab80e]" />
@@ -107,7 +107,7 @@ export function Footer() {
         <div className="container mx-auto px-4 py-6">
           <div className="flex flex-col md:flex-row justify-center items-center gap-4">
             <p className="text-gray-400 text-sm">
-              © {new Date().getFullYear()} Green Eco Planet. All Rights Reserved.
+              © {new Date().getFullYear()}  NGO Name. All Rights Reserved.
             </p> 
             {/* <div>
                 <Button

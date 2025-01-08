@@ -29,7 +29,7 @@ const volunteers = [
 
 export function Volunteers() {
   return (
-    <section className="py-16 px-24">
+    <section className="py-16 px-24 pt-4">
       <div className="container mx-auto px-24">
         <div className="text-center mb-16">
           <span className="text-3xl text-gray-400  italic">Projects</span>
