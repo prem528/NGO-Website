@@ -13,8 +13,9 @@ import { Gallery } from "./_components/home/Gallery";
 import { Footer } from "./_components/home/Footer";
 import { LatestBlogs } from "./_components/home/Latest-Blogs";
 import { Banner } from "./_components/home/Banner";
-import Testimonials from "./_components/home/Testimonials";
+ 
 import { GallerySection } from "./_components/Gallery/Gallery-Section";
+import NGOTestimonials from "./_components/home/NGO-Testimonial";
 
 function App() {
   return (
@@ -41,7 +42,7 @@ function App() {
                   <Impact />
                   <Gallery />
                   <Volunteers />
-                  <Testimonials />
+                  <NGOTestimonials/>
                   <LatestBlogs />
                   <Banner />
                 </>
