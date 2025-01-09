@@ -5,7 +5,7 @@ import recycle from "../../assets/ngo.jpg";
 import recycle1 from "../../assets/recycle.jpg";
 import recycle2 from "../../assets/recycle1.jpeg";
 import recycle3 from "../../assets/earth3.jpg";
-import nature from "../../assets/ngobg11.mp4";
+import background from "../../assets/forest11.jpg";
 
 const workItems = [
   {
@@ -40,20 +40,11 @@ export function OurWork() {
   }, []);
   return (
     <section className="relative py-16 px-4 sm:px-10 md:px-16 lg:px-24 overflow-hidden">
-      {/* Background Video */}
+  
       <div className="absolute inset-0 w-full h-full">
-        <video
-          ref={videoRef}
-          autoPlay
-          muted
-          loop
-          playsInline
-          className="w-full h-full object-cover"
-        >
-          <source src={nature} type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
-        <div className="absolute inset-0 bg-black/20" />
+         <img 
+         src={background} />
+        <div className="absolute inset-0 bg-black/10" />
       </div>
 
       {/* Content */}

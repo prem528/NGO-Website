@@ -1,6 +1,6 @@
 import { ArrowRight } from "lucide-react";
 import { Button } from "../../components/ui/button";
-import earth from "../../assets/earthimg1.jpg";
+import earth from "../../assets/earthimg11.png";
 
 export function AboutUs() {
   return (

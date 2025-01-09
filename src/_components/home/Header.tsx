@@ -31,7 +31,7 @@ export function Header() {
     <>
       {/* TopBar with smooth hide/show effect */}
       <div
-        className={`transition-transform duration-1000 ${
+        className={`transition-transform duration-1000 bg-white ${
           showTopBar ? "translate-y-0" : "-translate-y-full"
         }`}
       >

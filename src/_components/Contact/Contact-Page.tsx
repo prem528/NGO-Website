@@ -30,7 +30,7 @@ export default function ContactPage() {
           </div>
         </section>
         
-        <section className="py-16 md:py-24 bg-gradient-to-br from-green-100/30 to-transparent">
+        <section className="py-16 md:py-24 bg-white">
           <div className="container mx-auto px-4 lg:px-24">
             <div className="grid md:grid-cols-2 gap-12">
               <ContactForm />
