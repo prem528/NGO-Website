@@ -153,7 +153,7 @@ const NGOTestimonials: React.FC = () => {
     <section className="py-24 px-4 pt-10 sm:px-6 md:px-8 lg:px-24 bg-white">
       <div className="container mx-auto">
         <div className="text-center mb-16">
-          <span className="text-3xl text-gray-400 font-light italic">
+          <span className="text-3xl text-gray-400 italic">
             Testimonials
           </span>
           <h2 className="text-4xl md:text-5xl text-green-700 font-bold mt-2">

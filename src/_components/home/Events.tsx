@@ -37,7 +37,7 @@ export function Events() {
           {/* Left Column (1/3) */}
           <div className="space-y-6 lg:col-span-1">
             <div>
-              <span className="text-4xl text-gray-500">Our Work</span>
+              <span className="text-4xl text-gray-400  italic">Our Work</span>
               <h2 className="text-4xl  text-gray-700 font-bold mt-2">
                 Join Our Event And Help Us To Raise Funds
               </h2>

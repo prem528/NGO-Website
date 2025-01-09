@@ -21,9 +21,6 @@ export function Header() {
             <Link to="/" className="text-gray-600 hover:text-[#7ab80e]">
               HOME
             </Link>
-            <Link to="/pages" className="text-gray-600 hover:text-[#7ab80e]">
-              PAGES
-            </Link>
             <Link to="/gallery" className="text-gray-600 hover:text-[#7ab80e]">
               GALLERY
             </Link>
@@ -34,7 +31,7 @@ export function Header() {
               CONTACT US
             </Link>
           </div>
-          <Button className="bg-[#7ab80e] hover:bg-[#7ab80e]/90">CONNECT</Button>
+          <Button className="bg-[#7ab80e] hover:bg-[#7ab80e]/90">Help Us</Button>
         </div>
       </div>
     </nav>

@@ -16,6 +16,10 @@ import { Banner } from "./_components/home/Banner";
  
 import { GallerySection } from "./_components/Gallery/Gallery-Section";
 import NGOTestimonials from "./_components/home/NGO-Testimonial";
+import BlogPage from "./_components/blog/BlogPage";
+import BlogPostPage from "./_components/blog/[slug]/page";
+import ContactPage from "./_components/Contact/Contact-Page";
+import DonatePage from "./_components/Donation/Donate-Page";
 
 function App() {
   return (
@@ -50,6 +54,10 @@ function App() {
             />
 
             <Route path="gallery" element={<GallerySection/>} />
+            <Route path="/blog" element={<BlogPage/>} />
+            <Route path="/blog/:slug" element={<BlogPostPage />} />
+            <Route path="/contact" element={<ContactPage/>} />
+            <Route path="/donate" element={<DonatePage/>} />
           </Routes>
         </main>
       </div>

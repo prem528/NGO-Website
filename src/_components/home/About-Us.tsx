@@ -7,7 +7,7 @@ export function AboutUs() {
     <section className="py-16 md:py-16 px-24 bg-gradient-to-br from-green-200/30 to-transparent">
       <div className="container mx-auto px-24">
         <div className="text-center mb-12">
-          <span className="text-3xl text-gray-500 font-light">About Us</span>
+          <span className="text-3xl text-gray-400  italic">About Us</span>
           <div className="flex justify-center items-center gap-4 mt-4">
             <div className="h-px w-80 bg-green-300"></div>
           </div>

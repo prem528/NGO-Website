@@ -46,7 +46,7 @@ export function LatestBlogs() {
  
       <div className="relative container mx-auto px-24">
         <div className="text-center mb-16">
-          <span className="text-3xl text-gray-200 font-light italic">
+          <span className="text-3xl text-gray-300 italic">
             News & Blogs
           </span>
           <h2 className="text-4xl md:text-5xl text-green-700 font-bold mt-2">
