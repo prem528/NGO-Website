@@ -4,21 +4,21 @@ import earth from "../../assets/earthimg1.jpg";
 
 export function AboutUs() {
   return (
-    <section className="py-16 md:py-16 px-24 bg-gradient-to-br from-green-200/30 to-transparent">
-      <div className="container mx-auto px-24">
-        <div className="text-center mb-12">
-          <span className="text-3xl text-gray-400  italic">About Us</span>
-          <div className="flex justify-center items-center gap-4 mt-4">
-            <div className="h-px w-80 bg-green-300"></div>
+    <section className="py-8 md:py-16 px-4 md:px-24 ">
+      <div className="container mx-auto px-4 md:px-24">
+        <div className="text-center mb-8 md:mb-12">
+          <span className="text-2xl md:text-3xl text-gray-400 italic">About Us</span>
+          <div className="flex justify-center items-center gap-2 md:gap-4 mt-2 md:mt-4">
+            <div className="h-px w-64 md:w-80 bg-green-300"></div>
           </div>
-          <h2 className="text-4xl md:text-5xl text-green-700 font-bold mt-2">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl text-green-700 font-bold mt-2">
             Welcome To Green Eco Planet
           </h2>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-8 items-center">
-          <div className="space-y-6">
-            <h3 className="text-2xl md:text-3xl text-gray-600 font-medium leading-relaxed">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 items-center">
+          <div className="space-y-4 md:space-y-6">
+            <h3 className="text-xl md:text-2xl lg:text-3xl text-gray-600 font-medium leading-relaxed">
               We are providing treatment by some experienced physicians
             </h3>
             <p className="text-gray-500 leading-relaxed">
@@ -29,7 +29,7 @@ export function AboutUs() {
               remaining essentially unchangelease of Letraset sheets contaware
               like Aldus PageMaker including versions of Lorem Ipsum.
             </p>
-            <ul className="space-y-4">
+            <ul className="space-y-2 md:space-y-4">
               {[
                 "Arts Programs",
                 "Online skilled Courses",
@@ -45,7 +45,7 @@ export function AboutUs() {
                 </li>
               ))}
             </ul>
-            <Button className="bg-[#7ab80e] hover:bg-[#7ab80e]/90 text-white px-8">
+            <Button className="bg-[#7ab80e] hover:bg-[#7ab80e]/90 text-white px-6 md:px-8">
               CONTACT US
             </Button>
           </div>
@@ -53,8 +53,8 @@ export function AboutUs() {
             <img
               src={earth}
               alt="image"
-              width={500}
-              height={500}
+              width={400}
+              height={400}
               className="object-contain"
             />
           </div>

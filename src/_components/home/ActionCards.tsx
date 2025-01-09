@@ -27,12 +27,12 @@ const cards = [
 
 export function ActionCards() {
   return (
-    <div className="relative container mx-auto px-24">
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 -mt-20 px-4">
+    <div className="relative container mx-auto px-4 md:px-8 lg:px-16">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 -mt-20">
         {cards.map((card, index) => (
           <div
             key={index}
-            className="bg-[#7ab80e] p-6 text-white text-center rounded-lg shadow-lg transition-transform transform hover:scale-105 hover:shadow-xl"
+            className="bg-[#7ab80e] p-4 sm:p-6 text-white text-center rounded-lg shadow-lg transition-transform transform hover:scale-105 hover:shadow-xl"
           >
             <h3 className="text-xl font-bold mb-4">{card.title}</h3>
             {card.isContact ? (

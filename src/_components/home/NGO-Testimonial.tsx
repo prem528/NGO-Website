@@ -150,7 +150,7 @@ const NGOTestimonials: React.FC = () => {
   };
 
   return (
-    <section className="py-24 px-4 pt-10 sm:px-6 md:px-8 lg:px-24 bg-white">
+    <section className="py-24 px-4 pt-10 sm:px-6 md:px-8 lg:px-24">
       <div className="container mx-auto">
         <div className="text-center mb-16">
           <span className="text-3xl text-gray-400 italic">

@@ -1,6 +1,5 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import { TopBar } from "./_components/home/TopBar";
-import { Header } from "./_components/home/Header";
+import  {Header}  from "./_components/home/Header";
 import HeroSection from "./_components/home/HeroSection";
 import { AboutUs } from "./_components/home/About-Us";
 import Services from "./_components/home/Services";
@@ -20,12 +19,13 @@ import BlogPage from "./_components/blog/BlogPage";
 import BlogPostPage from "./_components/blog/[slug]/page";
 import ContactPage from "./_components/Contact/Contact-Page";
 import DonatePage from "./_components/Donation/Donate-Page";
+import { BackgroundWrapper } from "./_components/Background/BackgroundWrapper";
 
 function App() {
   return (
+    <BackgroundWrapper>
     <BrowserRouter>
       <div className="flex flex-col min-h-screen">
-        <TopBar />
         <Header />
         <main className=" ">
           <Routes>
@@ -52,7 +52,6 @@ function App() {
                 </>
               }
             />
-
             <Route path="gallery" element={<GallerySection/>} />
             <Route path="/blog" element={<BlogPage/>} />
             <Route path="/blog/:slug" element={<BlogPostPage />} />
@@ -65,6 +64,7 @@ function App() {
         <Footer />
       </div>
     </BrowserRouter>
+    </BackgroundWrapper>
   );
 }
 

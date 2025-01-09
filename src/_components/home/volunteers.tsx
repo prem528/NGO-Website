@@ -29,14 +29,14 @@ const volunteers = [
 
 export function Volunteers() {
   return (
-    <section className="py-16 px-24 pt-4">
-      <div className="container mx-auto px-24">
+    <section className="py-16 px-4 sm:px-8 md:px-16 lg:px-24 pt-4 ">
+      <div className="container mx-auto px-4 sm:px-8 md:px-16 lg:px-24">
         <div className="text-center mb-16">
-          <span className="text-3xl text-gray-400  italic">Projects</span>
+          <span className="text-3xl text-gray-400 italic">Projects</span>
           <h2 className="text-4xl md:text-5xl text-green-700 font-bold mt-2">Our volunteers</h2>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
           {volunteers.map((volunteer) => (
             <div key={volunteer.id} className="text-center group">
               <div className="relative mb-6 overflow-hidden rounded-lg">
@@ -57,4 +57,5 @@ export function Volunteers() {
     </section>
   )
 }
+
 

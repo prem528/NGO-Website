@@ -97,7 +97,7 @@ export function GallerySection() {
     <main>
       <div>
         {/* Hero Section */}
-        <section className="relative py-20 bg-gray-900">
+        <section className="relative py-16 sm:py-20 md:py-24 bg-gray-900">
           <div className="absolute inset-0">
             <div className="absolute inset-0 bg-gradient-to-r from-gray-900/95 to-gray-900/35" />
             <img
@@ -106,22 +106,23 @@ export function GallerySection() {
               className="w-full h-full object-cover"
             />
           </div>
-          <div className="relative container mx-auto px-24">
+          <div className="relative container mx-auto px-4 sm:px-8 lg:px-24">
             <div className="max-w-3xl">
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 md:mb-6">
                 Gallery
               </h1>
-              <p className="text-lg text-gray-300">
+              <p className="text-base sm:text-lg text-gray-300">
                 Explore our initiatives and achievements.
               </p>
             </div>
           </div>
         </section>
 
-        <section className="py-16 px-24 md:py-24">
-          <div className="container mx-auto px-20">
+        {/* Gallery Section */}
+        <section className="py-10 px-4 sm:px-8 md:py-16 lg:py-24 lg:px-24">
+          <div className="container mx-auto">
             {/* Category Filter */}
-            <div className="flex flex-wrap justify-center gap-4 mb-12">
+            <div className="flex flex-wrap justify-center gap-4 mb-8 md:mb-12">
               {categories.map((category) => (
                 <Button
                   key={category}
@@ -141,7 +142,7 @@ export function GallerySection() {
             </div>
 
             {/* Gallery Grid */}
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
               {filteredItems.map((item) => (
                 <div
                   key={item.id}
@@ -155,8 +156,8 @@ export function GallerySection() {
                       className="object-cover w-full h-full transition-transform duration-500 group-hover:scale-110"
                     />
                     <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                      <div className="absolute inset-0 flex flex-col items-center justify-center p-6 text-center">
-                        <h3 className="text-xl font-bold text-white mb-2">
+                      <div className="absolute inset-0 flex flex-col items-center justify-center p-4 text-center">
+                        <h3 className="text-lg font-bold text-white mb-2">
                           {item.title}
                         </h3>
                         <p className="text-gray-200 text-sm">
@@ -185,7 +186,7 @@ export function GallerySection() {
                       />
                     </div>
                     <div className="p-4">
-                      <h3 className="text-xl font-bold mb-2">
+                      <h3 className="text-lg font-bold mb-2">
                         {selectedImage.title}
                       </h3>
                       <p className="text-gray-600">
@@ -202,4 +203,3 @@ export function GallerySection() {
     </main>
   );
 }
-

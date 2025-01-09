@@ -31,14 +31,14 @@ const features = [
 
 export function Events() {
   return (
-    <section className="py-20 px-24">
-      <div className="container mx-auto">
-        <div className="grid lg:grid-cols-3 gap-16 items-start px-24">
+    <section className="py-10 px-4 md:py-20 md:px-24 ">
+      <div className="container mx-auto flex justify-center">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-16 items-start">
           {/* Left Column (1/3) */}
-          <div className="space-y-6 lg:col-span-1">
+          <div className="space-y-6 md:col-span-1 text-center">
             <div>
-              <span className="text-4xl text-gray-400  italic">Our Work</span>
-              <h2 className="text-4xl  text-gray-700 font-bold mt-2">
+              <span className="text-4xl text-gray-400 italic">Our Work</span>
+              <h2 className="text-4xl text-gray-700 font-bold mt-2">
                 Join Our Event And Help Us To Raise Funds
               </h2>
             </div>
@@ -59,17 +59,21 @@ export function Events() {
               clickthroughs from DevOps.
             </p>
 
-            <Button className="bg-[#7ab80e] hover:bg-[#7ab80e]/90 text-white px-8">
-              DONATE NOW
-            </Button>
+            {/* Centering the button */}
+            <div className="flex justify-center">
+              <Button className="bg-[#7ab80e] hover:bg-[#7ab80e]/90 w-full text-white px-8">
+                DONATE NOW
+              </Button>
+            </div>
           </div>
 
           {/* Right Column (2/3) */}
-          <div className="grid lg:col-span-2 md:grid-cols-2 pt-16 gap-16">
+          <div className="grid md:col-span-2 grid-cols-1 md:grid-cols-2 pt-8 md:pt-16 gap-8 md:gap-16 text-center">
             {features.map((feature, index) => (
               <div key={index} className="space-y-4">
-                <div className="w-12 h-12 rounded-full border-2 border-[#7ab80e] flex items-center justify-center text-[#7ab80e]">
-                  <feature.icon size={24} />
+                {/* Icon Container */}
+                <div className="w-16 h-16 rounded-full border-2 border-[#7ab80e] flex items-center justify-center mx-auto">
+                  <feature.icon size={32} className="text-[#7ab80e]" />
                 </div>
                 <h3 className="text-xl font-semibold text-gray-700">
                   {feature.title}

@@ -41,11 +41,11 @@ const items = [
 export function Gallery() {
   return (
     <div className="py-10 ">
-        <div className="text-center mb-16">
-          <span className="text-3xl text-gray-400  italic">Our Work </span>
-          <h2 className="text-4xl md:text-5xl text-green-700 font-bold mt-2">Gallery</h2>
-        </div>
-      <BentoGrid className="py-4">
+      <div className="text-center mb-16">
+        <span className="text-3xl text-gray-400 italic">Our Work </span>
+        <h2 className="text-4xl md:text-5xl text-green-700 font-bold mt-2">Gallery</h2>
+      </div>
+      <BentoGrid className="py-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
         {items.map((item, i) => (
           <div
             key={i}

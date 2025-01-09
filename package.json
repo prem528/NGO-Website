@@ -12,6 +12,7 @@
   "dependencies": {
     "@radix-ui/react-dialog": "^1.1.4",
     "@radix-ui/react-label": "^2.1.1",
+    "@radix-ui/react-navigation-menu": "^1.2.3",
     "@radix-ui/react-radio-group": "^1.2.2",
     "@radix-ui/react-slot": "^1.1.1",
     "@radix-ui/react-toast": "^1.2.4",
@@ -22,6 +23,7 @@
     "lucide-react": "^0.469.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
+    "react-feather": "^2.0.10",
     "react-router-dom": "^7.1.1",
     "react-slick": "^0.30.3",
     "slick-carousel": "^1.8.1",

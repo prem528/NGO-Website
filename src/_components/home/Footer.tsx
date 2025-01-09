@@ -4,15 +4,12 @@ import { Button } from '../../components/ui/button'
  
 
 export function Footer() {
-//   const scrollToTop = () => {
-//     window.scrollTo({ top: 0, behavior: 'smooth' })
-//   }
 
   return (
-    <footer className="bg-gray-900 text-white px-24">
+    <footer className="bg-gray-900 text-white px-4 md:px-24">
       {/* Main Footer */}
-      <div className="container mx-auto px-24 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+      <div className="container mx-auto px-4 md:px-24 py-16">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* About Section */}
           <div className="space-y-6">
             <Link to="/" className="block">

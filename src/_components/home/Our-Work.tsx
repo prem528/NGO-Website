@@ -39,7 +39,7 @@ export function OurWork() {
     }
   }, []);
   return (
-    <section className="relative py-10 px-24 overflow-hidden">
+    <section className="relative py-16 px-4 sm:px-10 md:px-16 lg:px-24 overflow-hidden">
       {/* Background Video */}
       <div className="absolute inset-0 w-full h-full">
         <video
@@ -53,7 +53,7 @@ export function OurWork() {
           <source src={nature} type="video/mp4" />
           Your browser does not support the video tag.
         </video>
-        <div className="absolute inset-0 bg-black/50" />
+        <div className="absolute inset-0 bg-black/20" />
       </div>
 
       {/* Content */}
@@ -68,7 +68,7 @@ export function OurWork() {
           </h2>
         </div>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
           {workItems.map((item, index) => (
             <div
               key={index}
