@@ -4,7 +4,7 @@ import image from "../../assets/read.jpg";
 export default function BlogPage() {
   return (
     <main>
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto">
         {/* Hero Section */}
         <section className="relative py-20 bg-gray-900">
           <div className="absolute inset-0">
