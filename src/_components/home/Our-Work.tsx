@@ -39,13 +39,13 @@ export function OurWork() {
     }
   }, []);
   return (
-    <section className="relative py-16 px-4 sm:px-10 md:px-16 lg:px-24 overflow-hidden">
-  
-      <div className="absolute inset-0 w-full h-full">
-         <img 
-         src={background} />
-        <div className="absolute inset-0 bg-black/10" />
-      </div>
+    <section className="relative py-16 px-4 sm:px-10 md:px-16 lg:px-24 overflow-hidden" 
+    style={{
+      backgroundImage: `url(${background})`,
+      backgroundSize: "cover",
+      backgroundPosition: "center",
+    }}
+    >
 
       {/* Content */}
       <div className="relative container mx-auto px-10">
