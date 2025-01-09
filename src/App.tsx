@@ -23,11 +23,12 @@ import { BackgroundWrapper } from "./_components/Background/BackgroundWrapper";
 
 function App() {
   return (
-    <BackgroundWrapper>
+    
     <BrowserRouter>
       <div className="flex flex-col min-h-screen">
         <Header />
-        <main className=" ">
+        <main>
+          <BackgroundWrapper>
           <Routes>
             <Route
               path="/"
@@ -58,13 +59,14 @@ function App() {
             <Route path="/contact" element={<ContactPage/>} />
             <Route path="/donate" element={<DonatePage/>} />
           </Routes>
+          </BackgroundWrapper>    
         </main>
       </div>
       <div>
         <Footer />
       </div>
     </BrowserRouter>
-    </BackgroundWrapper>
+    
   );
 }
 
