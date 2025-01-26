@@ -4,7 +4,7 @@ import image from "../../assets/read.jpg";
 export default function BlogPage() {
   return (
     <main>
-      <div className="container mx-auto">
+      <div className="container mx-auto bg-gradient-to-b from-green-100 via-white to-green-50/30">
         {/* Hero Section */}
         <section className="relative py-20 bg-gray-900">
           <div className="absolute inset-0">

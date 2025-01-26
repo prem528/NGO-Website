@@ -6,7 +6,6 @@ import { Map } from "./Map";
 export default function ContactPage() {
   return (
     <main>
-
       <div className="">
         {/* Hero Section */}
         <section className="relative py-20 bg-gray-900">
@@ -18,19 +17,19 @@ export default function ContactPage() {
               className="w-full h-full object-cover"
             />
           </div>
-          <div className="relative container mx-auto px-24">
+          <div className="relative max-w-7xl mx-auto px-4">
             <div className="max-w-3xl">
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
+              <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
                 Contact Us
               </h1>
-              <p className="text-lg text-gray-300">
+              <p className="text-lg md:text-xl text-gray-300">
                 Get in touch with us for any inquiries, collaborations, or support. We're here to help!
               </p>
             </div>
           </div>
         </section>
         
-        <section className="py-16 md:py-24 bg-white">
+        <section className="py-16 md:py-24 bg-gradient-to-b from-green-50 via-white to-green-300/30">
           <div className="container mx-auto px-4 lg:px-24">
             <div className="grid md:grid-cols-2 gap-12">
               <ContactForm />
