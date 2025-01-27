@@ -1,8 +1,53 @@
 import { Link } from "react-router-dom";
-import { blogPosts } from "../../lib/blog-data";
+import { useState, useEffect } from "react";
+import axios from "axios";
 import { Button } from "../../components/ui/button";
 
+export interface BlogPost {
+  id: number;
+  title: string;
+  slug: string;
+  date: string;
+  category: string;
+  image: string;
+  excerpt: string;
+  content: string[];
+}
+
 export function BlogList() {
+  const [blogPosts, setBlogPosts] = useState<BlogPost[]>([]);
+  const [loading, setLoading] = useState<boolean>(true);
+  const [error, setError] = useState<string | null>(null);
+
+  useEffect(() => {
+    const fetchBlogs = async () => {
+      try {
+        const response = await axios.get("http://localhost:8080/api/v1/blog/all-blog");
+        const blogs = response.data.blogs.map((blog: any) => ({
+          id: blog._id,
+          title: blog.title,
+          slug: blog.slug,
+          date: new Date(blog.date).toLocaleDateString(),
+          category: blog.category,
+          image: blog.image,
+          excerpt: blog.excerpt,
+          content: blog.content,
+        }));
+        setBlogPosts(blogs);
+      } catch (err) {
+        console.error(err);
+        setError("Failed to fetch blogs. Please try again later.");
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchBlogs();
+  }, []);
+
+  if (loading) return <div>Loading...</div>;
+  if (error) return <div>{error}</div>;
+
   return (
     <section className="py-16 md:py-24">
       <div className="container mx-auto px-4">
@@ -31,7 +76,10 @@ export function BlogList() {
                 </h2>
                 <p className="text-gray-600 mb-4 line-clamp-3">{post.excerpt}</p>
                 <Link to={`/blog/${post.slug}`}>
-                  <Button variant="outline" className="w-full border-[#7ab80e] text-[#7ab80e] hover:bg-[#7ab80e] hover:text-white">
+                  <Button
+                    variant="outline"
+                    className="w-full border-[#7ab80e] text-[#7ab80e] hover:bg-[#7ab80e] hover:text-white"
+                  >
                     Read More
                   </Button>
                 </Link>
@@ -41,6 +89,5 @@ export function BlogList() {
         </div>
       </div>
     </section>
-  )
+  );
 }
-

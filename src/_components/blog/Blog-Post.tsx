@@ -1,6 +1,6 @@
 import { BlogPost as BlogPostType } from "../../lib/blog-data";
 
-export function BlogPost({ post }: { post: BlogPostType }) {
+export const BlogPostComponent = ({ post }: { post: BlogPostType }) => {
   return (
     <article className="py-16 md:py-24">
       <div className="container mx-auto px-4">
@@ -38,4 +38,4 @@ export function BlogPost({ post }: { post: BlogPostType }) {
       </div>
     </article>
   );
-}
+};

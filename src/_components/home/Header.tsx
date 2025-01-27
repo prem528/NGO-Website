@@ -89,7 +89,7 @@ export function Header() {
               CONTACT US
             </Link>
             <Link 
-            to="/admin">
+            to="/all-blogs">
             <Button
               className="bg-[#7ab80e] hover:bg-[#7ab80e]/90 w-full sm:w-auto"
               onClick={() => setIsMenuOpen(false)}

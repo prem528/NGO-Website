@@ -20,6 +20,7 @@ import BlogPostPage from "./_components/blog/[slug]/page";
 import ContactPage from "./_components/Contact/Contact-Page";
 import DonatePage from "./_components/Donation/Donate-Page";
 import { BackgroundWrapper } from "./_components/Background/BackgroundWrapper";
+import Blogs from "./_components/pages/Blogs";
  
 function App() {
  
@@ -58,6 +59,7 @@ function App() {
                 <Route path="/blog/:slug" element={<BlogPostPage />} />
                 <Route path="/contact" element={<ContactPage />} />
                 <Route path="/donate" element={<DonatePage />} />
+                <Route path="/all-blogs" element={<Blogs />} />
   
               </Routes>
             </BackgroundWrapper>
