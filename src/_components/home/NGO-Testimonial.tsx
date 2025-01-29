@@ -160,7 +160,7 @@ const NGOTestimonials: React.FC = () => {
             What Our Clients Say
           </h2>
         </div>
-        <div className="relative px-4 sm:px-0" data-aos="zoom-in">
+        <div className="relative px-4 sm:px-0" data-aos="fade-up" data-aos-duration="1000">
           <Slider {...settings}>
             {testimonials.map((testimonial) => (
               <Testimonial key={testimonial.id} {...testimonial} />

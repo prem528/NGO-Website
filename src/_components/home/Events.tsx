@@ -29,9 +29,9 @@ const features = [
   },
 ];
 
-export function Events() {
+function Events() {
   return (
-    <section className="py-10 px-4 md:py-20 md:px-24 ">
+    <section className="py-10 px-4 md:py-20 md:px-24" data-aos="fade-up" data-aos-duration="1000">
       <div className="container mx-auto flex justify-center">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-16 items-start">
           {/* Left Column (1/3) */}
@@ -87,3 +87,5 @@ export function Events() {
     </section>
   );
 }
+
+export default Events;

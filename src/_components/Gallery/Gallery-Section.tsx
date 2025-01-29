@@ -1,13 +1,16 @@
 import { useState } from "react";
+import { Button } from "../../components/ui/button";
+import { Dialog, DialogContent } from "../../components/ui/dialog";
+
+// Note: You'll need to properly import your images from your assets directory
+// For this example, we'll use placeholder images
 import image from "../../assets/earth3.jpg";
 import image1 from "../../assets/ngo.jpg";
 import image2 from "../../assets/ngo11.jpg";
 import image5 from "../../assets/recycle.jpg";
 import image6 from "../../assets/ngo14.jpg";
 
-import { Button } from "../../components/ui/button";
-import { Dialog, DialogContent } from "../../components/ui/dialog";
-
+ 
 type GalleryItem = {
   id: number;
   title: string;
@@ -84,7 +87,7 @@ const galleryItems: GalleryItem[] = [
 
 const categories = ["All", "Nature", "Water", "Wildlife", "Energy"];
 
-export function GallerySection() {
+const GallerySection = () => {
   const [selectedCategory, setSelectedCategory] = useState("All");
   const [selectedImage, setSelectedImage] = useState<GalleryItem | null>(null);
 
@@ -107,7 +110,7 @@ export function GallerySection() {
             />
           </div>
           <div className="relative container mx-auto px-4 sm:px-8 lg:px-24">
-            <div className="max-w-3xl">
+            <div className="max-w-3xl mx-auto text-center">
               <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 md:mb-6">
                 Gallery
               </h1>
@@ -126,9 +129,7 @@ export function GallerySection() {
               {categories.map((category) => (
                 <Button
                   key={category}
-                  variant={
-                    selectedCategory === category ? "default" : "outline"
-                  }
+                  variant={selectedCategory === category ? "default" : "outline"}
                   className={`${
                     selectedCategory === category
                       ? "bg-[#7ab80e] hover:bg-[#7ab80e]/90"
@@ -189,9 +190,7 @@ export function GallerySection() {
                       <h3 className="text-lg font-bold mb-2">
                         {selectedImage.title}
                       </h3>
-                      <p className="text-gray-600">
-                        {selectedImage.description}
-                      </p>
+                      <p className="text-gray-600">{selectedImage.description}</p>
                     </div>
                   </div>
                 )}
@@ -202,4 +201,6 @@ export function GallerySection() {
       </div>
     </main>
   );
-}
+};
+
+export default GallerySection;

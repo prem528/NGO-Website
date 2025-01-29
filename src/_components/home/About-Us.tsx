@@ -1,11 +1,12 @@
 import { ArrowRight } from "lucide-react";
 import { Button } from "../../components/ui/button";
 import earth from "../../assets/earthimg11.png";
+import { Link } from "react-router-dom";
 
-export function AboutUs() {
+function AboutUs() {
   return (
-    <section className="py-8 md:py-16 px-4 md:px-24 ">
-      <div className="container mx-auto px-4 md:px-24">
+    <section className="py-8 md:py-16 px-4 md:px-24">
+      <div className="container mx-auto px-4 md:px-24" data-aos="fade-up" data-aos-duration="1000">
         <div className="text-center mb-8 md:mb-12">
           <span className="text-2xl md:text-3xl text-gray-400 italic">About Us</span>
           <div className="flex justify-center items-center gap-2 md:gap-4 mt-2 md:mt-4">
@@ -45,9 +46,15 @@ export function AboutUs() {
                 </li>
               ))}
             </ul>
-            <Button className="bg-[#7ab80e] hover:bg-[#7ab80e]/90 text-white px-6 md:px-8">
+            <div>
+              <Link to="/contact">
+              <Button className="bg-[#7ab80e] hover:bg-[#7ab80e]/90 text-white px-6 md:px-8">
               CONTACT US
             </Button>
+              </Link>
+              
+            </div>
+            
           </div>
           <div className="flex justify-center">
             <img
@@ -63,3 +70,5 @@ export function AboutUs() {
     </section>
   );
 }
+
+export default AboutUs;

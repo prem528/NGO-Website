@@ -1,12 +1,21 @@
 import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import { Button } from "../../components/ui/button";
 import { TopBar } from "./TopBar";
+import { useSelector, useDispatch } from "react-redux";
+import toast from "react-hot-toast";
+import { authActions, RootState } from "../../redux/store";
 
-export function Header() {
+function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [showTopBar, setShowTopBar] = useState(true);
+
+  // Redux state and hooks
+  let isLogin = useSelector((state: RootState) => state.isLogin);
+  isLogin = Boolean(isLogin || localStorage.getItem("userId"));
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
 
   useEffect(() => {
     let lastScrollY = window.scrollY;
@@ -25,6 +34,18 @@ export function Header() {
 
   const toggleMenu = () => {
     setIsMenuOpen((prev) => !prev);
+  };
+
+  // Logout handler
+  const handleLogout = () => {
+    try {
+      dispatch(authActions.logout());
+      toast.success("Logout Successfully");
+      navigate("/login");
+      localStorage.clear();
+    } catch (error) {
+      console.error(error);
+    }
   };
 
   return (
@@ -88,18 +109,52 @@ export function Header() {
             >
               CONTACT US
             </Link>
-            <Link 
-            to="/all-blogs">
-            <Button
-              className="bg-[#7ab80e] hover:bg-[#7ab80e]/90 w-full sm:w-auto"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              Admin
-            </Button>
-            </Link>
+            {isLogin ? (
+              <>
+              <Button className="bg-blue-500 hover:bg-blue-600">
+              <Link
+                  to="/all-blogs"
+                  className="text-center"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  Admin 
+                </Link>
+              </Button>
+
+                {/* <Link
+                  to="/create-blog"
+                  className="text-gray-600 hover:text-[#7ab80e] text-center"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  Create Blog
+                </Link> */}
+                <Button
+                  onClick={handleLogout}
+                  className="bg-red-500 hover:bg-red-600 w-full sm:w-auto"
+                >
+                  Logout
+                </Button>
+              </>
+            ) : (
+              <>
+              <Button className="bg-green-500 hover:bg-green-600">
+              <Link
+                  to="/login"
+                  className="text-gray-600 hover:text-white text-center"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  Login
+                </Link>
+              </Button>
+
+ 
+              </>
+            )}
           </div>
         </div>
       </nav>
     </>
   );
 }
+
+export default Header;

@@ -6,7 +6,7 @@ import { Map } from "./Map";
 export default function ContactPage() {
   return (
     <main>
-      <div className="">
+      <div>
         {/* Hero Section */}
         <section className="relative py-20 bg-gray-900">
           <div className="absolute inset-0">
@@ -18,7 +18,7 @@ export default function ContactPage() {
             />
           </div>
           <div className="relative max-w-7xl mx-auto px-4">
-            <div className="max-w-3xl">
+            <div className="max-w-3xl mx-auto text-center">
               <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
                 Contact Us
               </h1>

@@ -1,5 +1,5 @@
 import image from "../../assets/realistic.webp";
-
+ 
 const volunteers = [
   {
     id: 1,
@@ -27,9 +27,9 @@ const volunteers = [
   }
 ]
 
-export function Volunteers() {
+function Volunteers() {
   return (
-    <section className="py-16 px-4 sm:px-8 md:px-16 lg:px-24 pt-4 ">
+    <section className="py-16 px-4 sm:px-8 md:px-16 lg:px-24 pt-4" data-aos="fade-up" data-aos-duration="1000">
       <div className="container mx-auto px-4 sm:px-8 md:px-16 lg:px-24">
         <div className="text-center mb-16">
           <span className="text-3xl text-gray-400 italic">Projects</span>
@@ -58,4 +58,4 @@ export function Volunteers() {
   )
 }
 
-
+export default Volunteers;

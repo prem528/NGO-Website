@@ -30,7 +30,7 @@ const workItems = [
   },
 ];
 
-export function OurWork() {
+ function OurWork() {
   const videoRef = useRef<HTMLVideoElement>(null);
 
   useEffect(() => {
@@ -48,7 +48,7 @@ export function OurWork() {
     >
 
       {/* Content */}
-      <div className="relative container mx-auto px-10">
+      <div className="relative container mx-auto px-10" data-aos="fade-up" data-aos-duration="500">
         <div className="text-center mb-16">
           <span className="text-3xl text-gray-300 italic">Our Work</span>
           <div className="flex justify-center items-center gap-4 mt-4">
@@ -94,3 +94,4 @@ export function OurWork() {
     </section>
   );
 }
+export default OurWork;

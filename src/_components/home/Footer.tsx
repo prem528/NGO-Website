@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import { Button } from '../../components/ui/button'
  
 
-export function Footer() {
+function Footer() {
 
   return (
     <footer className="bg-gray-900 text-white px-4 md:px-24">
@@ -123,4 +123,4 @@ export function Footer() {
     </footer>
   )
 }
-
+export default Footer;

@@ -16,7 +16,7 @@ const blogPosts = [
   },
   {
     id: 2,
-    title: "Green Initiatives for a Greener Tomorrow",
+    title: "Green Initiatives for a Greener Tomorrow Future",
     description:
       "There are many variations of passages of Lorem Ipsum, but the majority have in some form, by slightly believable.",
     image: image1,
@@ -32,7 +32,7 @@ const blogPosts = [
   },
 ];
 
-export function LatestBlogs() {
+function LatestBlogs() {
   return (
     <section
       className="relative py-12 px-4 sm:px-6 md:py-16 md:px-12 lg:px-24 overflow-hidden"
@@ -46,7 +46,7 @@ export function LatestBlogs() {
       <div className="absolute inset-0 bg-black/70" />
 
       {/* Content */}
-      <div className="relative container mx-auto">
+      <div className="relative container mx-auto" data-aos="fade-up" data-aos-duration="500">
         {/* Header */}
         <div className="text-center mb-12 md:mb-16">
           <span className="text-xl md:text-2xl lg:text-3xl text-gray-300 italic block">
@@ -62,7 +62,7 @@ export function LatestBlogs() {
           {blogPosts.map((post) => (
             <Link
               key={post.id}
-              to={`/blog/${post.slug}`}
+              to={"/blog"}
               className="group block"
             >
               <article className="rounded-lg overflow-hidden border transition-all duration-300 hover:border-[#7ab80e]/50 hover:shadow-lg hover:shadow-[#7ab80e]/5 bg-white">
@@ -98,3 +98,4 @@ export function LatestBlogs() {
     </section>
   );
 }
+export default LatestBlogs;

@@ -1,35 +1,59 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom";
-import { Header } from "./_components/home/Header";
-import HeroSection from "./_components/home/HeroSection";
-import { AboutUs } from "./_components/home/About-Us";
-import Services from "./_components/home/Services";
-import { OurWork } from "./_components/home/Our-Work";
+import { lazy, Suspense, useEffect } from "react";
+import { BrowserRouter, Route, Routes, useLocation } from "react-router-dom";
+import { HelmetProvider } from "react-helmet-async";
+import { ToastContainer } from "react-toastify";
+import { Toaster } from "react-hot-toast";
+import Aos from "aos";
+import "aos/dist/aos.css";
 import { ActionCards } from "./_components/home/ActionCards";
-import { Events } from "./_components/home/Events";
-import { Impact } from "./_components/home/Impact";
-import { Volunteers } from "./_components/home/volunteers";
-import { Gallery } from "./_components/home/Gallery";
-import { Footer } from "./_components/home/Footer";
-import { LatestBlogs } from "./_components/home/Latest-Blogs";
-import { Banner } from "./_components/home/Banner";
-
-import { GallerySection } from "./_components/Gallery/Gallery-Section";
 import NGOTestimonials from "./_components/home/NGO-Testimonial";
-import BlogPage from "./_components/blog/BlogPage";
-import BlogPostPage from "./_components/blog/[slug]/page";
-import ContactPage from "./_components/Contact/Contact-Page";
-import DonatePage from "./_components/Donation/Donate-Page";
-import { BackgroundWrapper } from "./_components/Background/BackgroundWrapper";
-import Blogs from "./_components/pages/Blogs";
- 
+
+const Header = lazy(() => import("./_components/home/Header"));
+const HeroSection = lazy(() => import("./_components/home/HeroSection"));
+const AboutUs = lazy(() => import("./_components/home/About-Us"));
+const Services = lazy(() => import("./_components/home/Services"));
+const OurWork = lazy(() => import("./_components/home/Our-Work"));
+const Events = lazy(() => import("./_components/home/Events"));
+const Impact = lazy(() => import("./_components/home/Impact"));
+const Volunteers = lazy(() => import("./_components/home/volunteers"));
+const Gallery = lazy(() => import("./_components/home/Gallery"));
+const Footer = lazy(() => import("./_components/home/Footer"));
+const LatestBlogs = lazy(() => import("./_components/home/Latest-Blogs"));
+const Banner = lazy(() => import("./_components/home/Banner"));
+const GallerySection = lazy(() => import("./_components/Gallery/Gallery-Section"));
+const BlogPage = lazy(() => import("./_components/blog/BlogPage"));
+const BlogPostPage = lazy(() => import("./_components/blog/[slug]/page"));
+const ContactPage = lazy(() => import("./_components/Contact/Contact-Page"));
+const DonatePage = lazy(() => import("./_components/Donation/Donate-Page"));
+const Blogs = lazy(() => import("./_components/pages/Blogs"));
+const CreateBlog = lazy(() => import("./_components/pages/CreateBlog"));
+const Login = lazy(() => import("./_components/Admin/LoginPage"));
+
+function ScrollToTop() {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
+  return null;
+}
+
 function App() {
- 
+  useEffect(() => {
+    Aos.init();
+  }, []);
+
   return (
+    <HelmetProvider>
+      <Toaster position="top-center" />
+      <ToastContainer />
       <BrowserRouter>
+        <ScrollToTop />
         <div className="flex flex-col min-h-screen">
-          <Header />
-          <main>
-            <BackgroundWrapper>
+          <Suspense fallback={<div>Loading...</div>}>
+            <Header />
+            <main>
               <Routes>
                 <Route
                   path="/"
@@ -60,15 +84,15 @@ function App() {
                 <Route path="/contact" element={<ContactPage />} />
                 <Route path="/donate" element={<DonatePage />} />
                 <Route path="/all-blogs" element={<Blogs />} />
-  
+                <Route path="/create-blog" element={<CreateBlog />} />
+                <Route path="/login" element={<Login />} />
               </Routes>
-            </BackgroundWrapper>
-          </main>
-        </div>
-        <div>
-          <Footer />
+            </main>
+            <Footer />
+          </Suspense>
         </div>
       </BrowserRouter>
+    </HelmetProvider>
   );
 }
 
