@@ -32,7 +32,7 @@ const CreateBlog: React.FC = () => {
     e.preventDefault()
 
     try {
-      const response = await axios.post("${process.env.REACT_BACKEND_URL}/api/v1/blog/create-blog", formData)
+      const response = await axios.post("https://ngo-website11.onrender.com/api/v1/blog/create-blog", formData)
 
       if (response.data?.success) {
         toast.success("Blog created successfully!")

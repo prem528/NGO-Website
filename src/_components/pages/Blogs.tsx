@@ -25,7 +25,7 @@ const Blogs: React.FC = () => {
   const getAllBlogs = useCallback(async () => {
     try {
       const { data } = await axios.get<{ success: boolean; blogs: Blog[] }>(
-        "${process.env.REACT_BACKEND_URL}/api/v1/blog/all-blog"
+        "https://ngo-website11.onrender.com/api/v1/blog/all-blog"
       );
       if (data?.success) {
         setBlogs(data?.blogs);
