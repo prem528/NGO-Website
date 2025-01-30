@@ -51,7 +51,7 @@ function App() {
       <BrowserRouter>
         <ScrollToTop />
         <div className="flex flex-col min-h-screen">
-          <Suspense fallback={<div>Loading...</div>}>
+          <Suspense fallback={<div></div>}>
             <Header />
             <main>
               <Routes>
