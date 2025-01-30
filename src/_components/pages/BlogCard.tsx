@@ -37,7 +37,7 @@ const BlogCard: React.FC<BlogCardProps> = ({
               toast.dismiss();
               try {
                 const { data } = await axios.delete(
-                  `http://localhost:8080/api/v1/blog/delete-blog/${id}`
+                  `${process.env.REACT_BACKEND_URL}/api/v1/blog/delete-blog/${id}`
                 );
                 if (data?.success) {
                   toast.success("Blog deleted successfully!", {

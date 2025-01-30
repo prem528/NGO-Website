@@ -14,7 +14,7 @@ export default function BlogPostPage() {
   useEffect(() => {
     const fetchBlogs = async () => {
       try {
-        const response = await axios.get("http://localhost:8080/api/v1/blog/all-blog");
+        const response = await axios.get(`${process.env.REACT_BACKEND_URL}/api/v1/blog/all-blog`);
         const blogs = response.data.blogs.map((blog: any) => ({
           id: blog._id,
           title: blog.title,
