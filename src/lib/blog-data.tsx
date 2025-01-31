@@ -20,7 +20,7 @@ const BlogList = () => {
   useEffect(() => {
     const fetchBlogs = async () => {
       try {
-        const response = await axios.get("${process.env.REACT_BACKEND_URL}/api/v1/blog/all-blog");
+        const response = await axios.get("https://ngo-website11.onrender.com/api/v1/blog/all-blog");
         const blogs = response.data.blogs.map((blog: any) => ({
           id: blog._id, // Map MongoDB `_id` to `id`
           title: blog.title,

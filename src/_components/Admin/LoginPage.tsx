@@ -27,7 +27,7 @@ const Login: React.FC = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     try {
-      const { data } = await axios.post(`${process.env.REACT_BACKEND_URL}/api/v1/user/login`, {
+      const { data } = await axios.post("https://ngo-website11.onrender.com/api/v1/user/login", {
         email: inputs.email,
         password: inputs.password,
       });
