@@ -1,51 +1,10 @@
 import { Link } from "react-router-dom";
-import { useState, useEffect } from "react";
-import axios from "axios";
 import { Loader2 } from "lucide-react";
 import { Button } from "../../components/ui/button";
- 
-
-export interface BlogPost {
-  id: number;
-  title: string;
-  slug: string;
-  date: string;
-  category: string;
-  image: string;
-  excerpt: string;
-  content: string[];
-}
+import { useBlog } from "../../contexts/BlogContext"; // Import Blog Context
 
 export function BlogList() {
-  const [blogPosts, setBlogPosts] = useState<BlogPost[]>([]);
-  const [loading, setLoading] = useState<boolean>(true);
-  const [error, setError] = useState<string | null>(null);
-
-  useEffect(() => {
-    const fetchBlogs = async () => {
-      try {
-        const response = await axios.get("https://ngo-website11.onrender.com/api/v1/blog/all-blog");
-        const blogs = response.data.blogs.map((blog: any) => ({
-          id: blog._id,
-          title: blog.title,
-          slug: blog.slug,
-          date: new Date(blog.date).toLocaleDateString(),
-          category: blog.category,
-          image: blog.image,
-          excerpt: blog.excerpt,
-          content: blog.content,
-        }));
-        setBlogPosts(blogs);
-      } catch (err) {
-        console.error(err);
-        setError("Failed to fetch blogs. Please try again later.");
-      } finally {
-        setLoading(false);
-      }
-    };
-
-    fetchBlogs();
-  }, []);
+  const { blogPosts, loading, error, fetchBlogs } = useBlog(); // Use blog context
 
   if (loading) {
     return (
@@ -63,7 +22,7 @@ export function BlogList() {
           <p className="font-medium">Error loading blog posts</p>
           <p className="text-sm mt-1">{error}</p>
           <Button 
-            onClick={() => window.location.reload()} 
+            onClick={fetchBlogs} // Retry fetching blogs
             variant="outline"
             className="mt-4 border-red-500 text-red-500 hover:bg-red-500 hover:text-white"
           >

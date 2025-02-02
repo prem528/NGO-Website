@@ -7,6 +7,7 @@ import Aos from "aos";
 import "aos/dist/aos.css";
 import { ActionCards } from "./_components/home/ActionCards";
 import NGOTestimonials from "./_components/home/NGO-Testimonial";
+import { BlogProvider } from "./contexts/BlogContext"; // Import BlogProvider
 
 const Header = lazy(() => import("./_components/home/Header"));
 const HeroSection = lazy(() => import("./_components/home/HeroSection"));
@@ -50,47 +51,49 @@ function App() {
       <ToastContainer />
       <BrowserRouter>
         <ScrollToTop />
-        <div className="flex flex-col min-h-screen">
-          <Suspense fallback={<div></div>}>
-            <Header />
-            <main>
-              <Routes>
-                <Route
-                  path="/"
-                  element={
-                    <>
-                      <div className="relative">
-                        <HeroSection />
-                        <ActionCards />
-                      </div>
-                      <div className="pt-24">
-                        <AboutUs />
-                      </div>
-                      <Services />
-                      <OurWork />
-                      <Events />
-                      <Impact />
-                      <Gallery />
-                      <Volunteers />
-                      <NGOTestimonials />
-                      <LatestBlogs />
-                      <Banner />
-                    </>
-                  }
-                />
-                <Route path="gallery" element={<GallerySection />} />
-                <Route path="/blog" element={<BlogPage />} />
-                <Route path="/blog/:slug" element={<BlogPostPage />} />
-                <Route path="/contact" element={<ContactPage />} />
-                <Route path="/donate" element={<DonatePage />} />
-                <Route path="/all-blogs" element={<Blogs />} />
-                <Route path="/create-blog" element={<CreateBlog />} />
-                <Route path="/login" element={<Login />} />
-              </Routes>
-            </main>
-            <Footer />
-          </Suspense>
-        </div>
+        <BlogProvider> {/* Wrap with BlogProvider */}
+          <div className="flex flex-col min-h-screen">
+            <Suspense fallback={<div></div>}>
+              <Header />
+              <main>
+                <Routes>
+                  <Route
+                    path="/"
+                    element={
+                      <>
+                        <div className="relative">
+                          <HeroSection />
+                          <ActionCards />
+                        </div>
+                        <div className="pt-24">
+                          <AboutUs />
+                        </div>
+                        <Services />
+                        <OurWork />
+                        <Events />
+                        <Impact />
+                        <Gallery />
+                        <Volunteers />
+                        <NGOTestimonials />
+                        <LatestBlogs />
+                        <Banner />
+                      </>
+                    }
+                  />
+                  <Route path="gallery" element={<GallerySection />} />
+                  <Route path="/blog" element={<BlogPage />} />
+                  <Route path="/blog/:slug" element={<BlogPostPage />} />
+                  <Route path="/contact" element={<ContactPage />} />
+                  <Route path="/donate" element={<DonatePage />} />
+                  <Route path="/all-blogs" element={<Blogs />} />
+                  <Route path="/create-blog" element={<CreateBlog />} />
+                  <Route path="/login" element={<Login />} />
+                </Routes>
+              </main>
+              <Footer />
+            </Suspense>
+          </div>
+        </BlogProvider>
       </BrowserRouter>
     </HelmetProvider>
   );

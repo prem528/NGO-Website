@@ -38,6 +38,7 @@ const fadeIn = {
 const imageMotion = {
   hidden: { scale: 2, opacity: 0 },
   visible: { scale: 1, opacity: 1 },
+  transition: { duration: 1.5, ease: "easeInOut" },
 };
 
 export default function Services() {
@@ -69,7 +70,7 @@ export default function Services() {
   return (
     <section
       ref={ref}
-      className="py-16 px-6 md:px-12 lg:px-24" data-aos="fade-up" data-aos-duration="500"
+      className="py-16 px-6 md:px-12 lg:px-24" data-aos="fade-up" data-aos-duration="1000"
     >
       <div className="container mx-auto">
         {/* Section Header */}

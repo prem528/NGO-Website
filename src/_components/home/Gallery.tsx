@@ -54,10 +54,10 @@ function Gallery() {
   };
 
   return (
-    <div className="py-10" data-aos="fade-up" data-aos-duration="500">
+    <div className="py-10" data-aos="fade-up" data-aos-duration="1000">
       {/* Add Meta Tags */}
       <Helmet>
-        <title>Gallery - Our Work</title>
+         
         <meta
           name="description"
           content="Explore our gallery showcasing the impactful work we do for the community and the environment."
