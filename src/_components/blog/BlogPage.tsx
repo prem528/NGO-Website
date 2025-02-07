@@ -6,7 +6,7 @@ export default function BlogPage() {
     <main>
       <div className="container mx-auto bg-gradient-to-b from-green-100 via-white to-green-50/30">
         {/* Hero Section */}
-        <section className="relative py-20 bg-gray-900">
+        <section className="relative py-8 bg-gray-900">
           <div className="absolute inset-0">
             <div className="absolute inset-0 bg-gradient-to-r from-gray-900/90 to-gray-900/45" />
             <img

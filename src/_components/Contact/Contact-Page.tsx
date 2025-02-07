@@ -8,7 +8,7 @@ export default function ContactPage() {
     <main>
       <div>
         {/* Hero Section */}
-        <section className="relative py-20 bg-gray-900">
+        <section className="relative py-8 bg-gray-900">
           <div className="absolute inset-0">
             <div className="absolute inset-0 bg-gradient-to-r from-gray-900/95 to-gray-900/35" />
             <img
