@@ -1,50 +1,60 @@
-# React + TypeScript + Vite
+# 🌱 NGO Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+![image](https://github.com/user-attachments/assets/252a4c75-7f55-4c30-9d59-02c0a2592b3f)
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+A modern, fully responsive website built for a Non-Governmental Organization (NGO) to share their mission, showcase their work, and connect with the community. The site includes sections like About, Gallery, Blogs, and Contact, along with an admin panel to manage content.
 
-## Expanding the ESLint configuration
+## 📌 Live Demo
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+🌐 [Visit the Live Website](https://ngoprojectdemo.netlify.app/)
 
-- Configure the top-level `parserOptions` property like this:
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+## 🧾 Features
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+- 🖼️ Gallery with image upload (admin)
+- 📰 Blog section with blog upload (admin)
+- 📞 Contact form with email functionality
+- 📱 Fully responsive design
+- ✨ Smooth animations and modern UI
+- 🔐 Admin panel for managing content
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+## 🛠️ Tech Stack
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+### Frontend
+- React.js
+- TypeScript
+- Tailwind CSS
+- ShadCN UI
+- Vite 
+
+### Backend
+- Node.js
+- Express.js
+- MongoDB  
+- Hosted on Render
+
+### Deployment
+- **Frontend**: Netlify
+- **Backend**: Render
+
+
+## 🧑‍💻 Getting Started Locally
+
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/prem528/NGO-Website.git
+cd ngo-website
+
+npm install
+# or
+yarn install
+
+ Create .env File
+backend-url=https://your-backend-api-url.com
+
+
+
+
+
